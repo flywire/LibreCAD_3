@@ -129,7 +129,7 @@ git clone --recursive https://github.com/LibreCAD/LibreCAD_3.git
 Using any GUI git client:
 Clone https://github.com/LibreCAD/LibreCAD_3.git recursively.
 
-# Using Conan (recommended)
+# Using Conan (recommended) - flywire notes
 Conan is a package manager which provides C++ dependencies, compatible with Windows and Visual Studio. We recommand using it to simplify the compilation process.
 
 ## Conan
