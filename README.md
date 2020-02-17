@@ -126,7 +126,8 @@ Start VS, Clone or checkout code, Repository: https://github.com/LibreCAD/libdxf
 Build, Build all
 
 # Clone the repository
-# Note Librecad_3 MUST be cloned recursively to pick up linked repositories
+**Note Librecad_3 MUST be cloned recursively to pick up linked repositories.**
+
 Create a Librecad_3 directory under Repos path as used for libdxfrw
 Change to that directory
 Using Git Bash (or any other command line git command) [fairly sure this is installed with VS] Can probably run in explore address bar: 
@@ -135,7 +136,7 @@ git clone --recursive https://github.com/LibreCAD/LibreCAD_3.git
 ```
 
 # Using Conan (recommended)
-Conan is a package manager which provides C++ dependencies, compatible with Windows and Visual Studio. We recommand using it to simplify the compilation process.
+Conan is a package manager which provides C++ dependencies, compatible with Windows and Visual Studio. It is recommended to simplify the compilation process.
 
 ## Conan
 Download and install [Conan](https://conan.io/downloads.html).
