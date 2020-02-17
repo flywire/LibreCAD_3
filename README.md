@@ -121,7 +121,8 @@ Install Visual Studio with:
 - Windows SDK
 
 # libdxfrw
-Start VS, Clone or checkout code, Repository: https://github.com/LibreCAD/libdxfrw, Local path: C:\Users\User\Source\Repos , Clone
+Start VS, Clone or checkout code, Repository: https://github.com/LibreCAD/libdxfrw, Local path: C:\Users\User\Source\Repos, Clone
+
 Build, Build all
 
 # Clone the repository
