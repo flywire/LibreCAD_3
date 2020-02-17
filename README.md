@@ -111,7 +111,7 @@ You need to compile Google Test in /usr/src/gtest/ and move the libraries in /us
 GCC version from Ubuntu 14 doesn't support C++14. You need to install GCC 4.9.
 http://askubuntu.com/a/456849
 
-Windows
+Windows  - flywire notes
 ========
 
 # Visual Studio
@@ -120,16 +120,20 @@ Install Visual Studio with:
 - CMake for Windows
 - Windows SDK
 
+# libdxfrw
+Start VS, Clone or checkout code, Repository: https://github.com/LibreCAD/libdxfrw, Local path: C:\Users\User\Source\Repos , Clone
+Build, Build all
+
 # Clone the repository
-Using Git Bash (or any other command line git command): 
+# Note Librecad_3 MUST be cloned recursively to pick up linked repositories
+Create a Librecad_3 directory under Repos path as used for libdxfrw
+Change to that directory
+Using Git Bash (or any other command line git command) [fairly sure this is installed with VS] Can probably run in explore address bar: 
 ```
 git clone --recursive https://github.com/LibreCAD/LibreCAD_3.git
 ```
 
-Using any GUI git client:
-Clone https://github.com/LibreCAD/LibreCAD_3.git recursively.
-
-# Using Conan (recommended) - flywire notes
+# Using Conan (recommended)
 Conan is a package manager which provides C++ dependencies, compatible with Windows and Visual Studio. We recommand using it to simplify the compilation process.
 
 ## Conan
@@ -151,8 +155,7 @@ conan install ..
 
 **Not all dependencies are available (see https://github.com/conan-io/wishlist/issues/124). They have to be installed manually (see next section)**
 Those dependencies are:
-- libdxfrw
-VS, libdxfrw, Build all
+- libdxfrw - See above
 
 - Qt (version provided by binutils does not contains SVG/UiTools)
 select the latest version of the MSVC compiler; MSVC 2017 64-bit
@@ -194,6 +197,11 @@ copied the QT5dlls into the bin directory
 Copy DLLs to `E:\source\repos\LibreCAD_3\out\build\x64-Debug\bin`
 ```
 opengl32sw.dll
+```
+
+GLEW
+```
+set GLEW_ROOT=C:\local\glew-2.1.0
 ```
 
 OpenGL 3.1 configuration:
