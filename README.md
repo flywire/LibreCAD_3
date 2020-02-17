@@ -140,6 +140,8 @@ Conan is a package manager which provides C++ dependencies, compatible with Wind
 ## Conan
 Download and install [Conan](https://conan.io/downloads.html).
 
+`E:\source\repos\LibreCAD_3>git pull origin Conan`
+
 ## Dependencies
 Open a terminal inside the `LibreCAD_3` repository folder.
 Add the bincrafters repository
@@ -201,9 +203,7 @@ opengl32sw.dll
 ```
 
 GLEW
-```
-set GLEW_ROOT=C:\local\glew-2.1.0
-```
+- GLEW_ROOT should be set by CMake if it detects Conan
 
 OpenGL 3.1 configuration:
 ```
