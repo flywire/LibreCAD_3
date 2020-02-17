@@ -152,16 +152,56 @@ conan install ..
 **Not all dependencies are available (see https://github.com/conan-io/wishlist/issues/124). They have to be installed manually (see next section)**
 Those dependencies are:
 - libdxfrw
+VS, libdxfrw, Build all
+
 - Qt (version provided by binutils does not contains SVG/UiTools)
+select the latest version of the MSVC compiler; MSVC 2017 64-bit
 
 ## Configuration
 Change build type to RelWithDebInfo. Debug won't work as Conan libraries are compiled in release mode.
+
+Yes in VS (Project menu > CMake settings)
+
+Exactly which project (including path) should be open in VS?
+
+So you have to change it. You should see a dropdown with x64-Debug and it's where it has to be configured
+
+CMake settings are entered inside CMake command arguments, under Project>CMake settings
+
 
 Set CMake command arguments to and adapt to your configuration:
 ```
 -DLIBDXFRW_PATH=......./libdxfrw/out/install/x64-Debug 
 -DCMAKE_PREFIX_PATH=C:\Qt\5.14.1\msvc2017_64\lib\cmake
 ```
+
+```
+tinysplinecppd.dll not found error even though it's in E:\source\repos\LibreCAD_3\out\build\x64-Debug\bin directory
+```
+
+```
+add Qt's bin path to the PATH environment
+@Florian Does not work but does if qt dlls are in E:\source\repos\LibreCAD_3\out\build\x64-Debug\bin
+````
+
+Set QT Environment
+```
+set QTDIR=E:\Qt\5.14.1\msvc2017_64
+set QT_QPA_PLATFORM_PLUGIN_PATH=%QTDIR%\plugins\platforms\
+```
+
+copied the QT5dlls into the bin directory
+Copy DLLs to `E:\source\repos\LibreCAD_3\out\build\x64-Debug\bin`
+```
+opengl32sw.dll
+```
+
+OpenGL 3.1 configuration:
+```
+set QT_OPENGL=desktop
+```
+
+Run with VS green play button in the interface
 
 
 # Manual installation
